@@ -1,0 +1,85 @@
+	
+program TinhAB;
+
+uses
+crt;
+
+
+var
+a, b, i, kq: Int64;
+con: String;
+
+
+begin
+textBackground(- 13434625);
+writeln('H-Calculator': 50);//Mo dau chuong trinh
+writeln('Version: 1.0': 50);
+writeln('Update: 03.09.2020': 50);
+writeln('Developer: Huy Nguyen Quoc':50);
+writeln('Copyright: Brilliant Group':50);
+writeln;
+writeln('Start':50);
+writeln;
+textbackground(0);
+repeat
+textcolor(- 1);
+writeln('Enter: a: '); //Nhap bien a
+textcolor(- 6656);
+readln(a);
+textcolor(- 1);
+writeln('Enter: b: '); //Nhap bien b
+textcolor(- 6656);
+readln(b);
+textcolor(- 13434625);
+writeln('***');
+kq := 0; //Tinh luy thua
+b := b - 2;
+kq := a * a;
+for i := 1 to b do
+begin
+kq := a * kq;
+end;
+b := b + 2;
+textColor(- 1);
+writeln(a, '^', b, '=');//KQ Luy thua
+textColor(- 6656);
+writeln(kq);
+textColor(- 1);
+writeln;
+writeln(a, '+', b, '=');//Phep cong
+textColor(- 6656);
+writeln(a + b);
+writeln;
+textColor(- 1);
+writeln(a, '-', b, '=');//Phep tru
+textColor(- 6656);
+writeln(a - b);
+writeln;
+textColor(- 1);
+writeln(a, '*', b, '=');//Phep nhan
+textColor(- 6656);
+writeln(a * b);
+writeln;
+textColor(- 1);
+writeln(a, '/', b, '=');//Phep chia
+textColor(- 6656);
+writeln(a / b);
+writeln;
+textColor(- 1);
+writeln('Random ',a,'...',b,'=');//Xo so ngau nghien
+textcolor(-6656);
+writeln(Random (b));
+writeln;
+writeln('Continue? (Answer: yes/no)');//Tiep tuc hoac dung chuong trinh
+textcolor(- 13434625);
+readln(con);
+writeln;
+textColor(- 6656);
+writeln;
+textColor(- 1);
+until con = 'no';
+textbackground(- 13434625);
+writeln('The End':50);//Ket thuc chuong trinh
+textbackground(0);
+readln;
+end.
